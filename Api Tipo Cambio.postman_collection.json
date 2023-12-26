@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "1285832c-633f-4de6-8970-52e9eef4bce3",
+		"name": "Api Tipo Cambio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registrar_Transaccion_Tipo_Cambio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monedaOrigen\": \"PEN\",\r\n    \"monedaDestino\": \"USD\",\r\n    \"montoOrigen\": 350\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/tipocambio/realizar",
+				"description": "Se debe registrar la transaccion de tipo de cambio, indicando la moneda de origen, moneda de destino y el monto de Origen.\r\nSe devolveran los datos ingresados y el monto de destino luego de la conversion segun el tipo de cambio"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener-tipo-cambio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/tipocambio/obtener-tipo-cambio"
+			},
+			"response": []
+		},
+		{
+			"name": "CrearActualizar-tipo-cambio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monedaOrigen\": \"USD\",\r\n    \"monedaDestino\": \"PEN\",\r\n    \"tipoCambio\": 3.69\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/tipocambio/actualizar-tipo-cambio"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar-transacciones",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/tipocambio/listar-transacciones"
+			},
+			"response": []
+		}
+	]
+}
